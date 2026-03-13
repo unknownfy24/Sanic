@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DA HEDGEHAGS — Sanic &amp; Knackles Hedgehag Adaptian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦔</text></svg>">
+  <!-- SEO -->
+  <meta name="description" content="Browse all availabul hedgehags from Hallowean Island! 8 unique hedgehags including Sanic Jr., Knackles II, Shaddow, Amey Rose, Silvar, Blaze McFyre, Big Chungo, and Omachao. Adopt today.">
+  <meta name="keywords" content="adopt hedgehog, hedgehag adoptashun, hallowean island hedgehogs, sanic jr, knackles, shaddow hedgehog, amey rose">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Sanic & Knackles Hedgehag Adaptian">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DA HEDGEHAGS — Sanic & Knackles Hedgehag Adaptian">
+  <meta property="og:description" content="8 hedgehags availabul 4 adaptashun. All from Hallowean Island. All go very fast. Find ur hedgehag 2day.">
+  <meta property="og:url" content="https://hedgehagadaptian.halloweanisland.zone/adopt.html">
+  <meta property="og:image" content="https://hedgehagadaptian.halloweanisland.zone/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DA HEDGEHAGS — Adopt Ur Hedgehag 2day">
+  <meta name="twitter:description" content="8 hedgehags from Hallowean Island looking 4 a 4ever hoam. 🦔">
+  <meta name="geo.region" content="XX-HI">
+  <meta name="geo.placename" content="Hallowean Island, Zone 7, Act 3">
+  <meta name="geo.position" content="-7.777;77.777">
+  <meta name="ICBM" content="-7.777, 77.777">
+  <link rel="canonical" href="https://hedgehagadaptian.halloweanisland.zone/adopt.html">
+</head>
+<body>
+
+  <div class="bg-chaos" style="top:8%;left:-5%;transform:rotate(-10deg);color:var(--sanic-blue);">ADOPT</div>
+  <div class="bg-chaos" style="top:70%;right:-3%;transform:rotate(6deg);color:var(--knackles-red);">GO FAST</div>
+
+  <!-- ════════════ HEADER ════════════ -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <div class="logo-badge">🦔</div>
+        <div class="logo-text">
+          <span class="main-title">SANIC &amp; KNACKLES</span>
+          <span class="sub-title">hedgehag adaptian &bull; hallowean island</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOAM</a></li>
+          <li><a href="about.html">ABOWT US</a></li>
+          <li><a href="adopt.html" class="active">DA HEDGEHAGS</a></li>
+          <li><a href="donate.html">DONASHUN</a></li>
+          <li><a href="contact.html">KONTAKT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="chaos-ticker">
+    <div class="chaos-ticker-inner">
+      🦔&nbsp;FIND UR HEDGEHAG&nbsp;&nbsp;•&nbsp;&nbsp;ALL FROM HALLOWEAN ISLAND&nbsp;&nbsp;•&nbsp;&nbsp;SANIC APPROOVD&nbsp;&nbsp;•&nbsp;&nbsp;KNACKLES CERTIFIED&nbsp;&nbsp;•&nbsp;&nbsp;GOTTA GO ADOPT&nbsp;&nbsp;•&nbsp;&nbsp;DERE IS A HEDGEHAG 4 U&nbsp;&nbsp;•&nbsp;&nbsp;DA CHAOS EMERALDS WANT U 2 ADOPT&nbsp;&nbsp;•&nbsp;&nbsp;
+      🦔&nbsp;FIND UR HEDGEHAG&nbsp;&nbsp;•&nbsp;&nbsp;ALL FROM HALLOWEAN ISLAND&nbsp;&nbsp;•&nbsp;&nbsp;SANIC APPROOVD&nbsp;&nbsp;•&nbsp;&nbsp;KNACKLES CERTIFIED&nbsp;&nbsp;•&nbsp;&nbsp;GOTTA GO ADOPT&nbsp;&nbsp;•&nbsp;&nbsp;DERE IS A HEDGEHAG 4 U&nbsp;&nbsp;•&nbsp;&nbsp;DA CHAOS EMERALDS WANT U 2 ADOPT&nbsp;&nbsp;•&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1 class="section-title" style="font-size:clamp(2.5rem,7vw,4.5rem);">DA HEDGEHAGS</h1>
+      <p style="color:var(--text-muted);font-size:1rem;">all available 4 adaptashun • all from hallowean island • all going fast</p>
+      <div style="margin-top:12px;">
+        <span class="hedgehog-tag tag-blue" style="font-size:0.82rem;">🟢 AVAILABUL = ready now</span>
+        <span class="hedgehog-tag tag-gold" style="font-size:0.82rem;">🟡 PENDING = sum1 is thinkin abt it</span>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <span class="filter-label">FILTAR:</span>
+      <select class="filter-select">
+        <option>ALL HEDGEHAGS</option>
+        <option>VERY FAST ONES</option>
+        <option>EDGY ONES</option>
+        <option>CHAOS ONES</option>
+        <option>PUNCHING ONES</option>
+      </select>
+      <select class="filter-select">
+        <option>ANY CHAOS LVL</option>
+        <option>LOW CHAOS (1-33)</option>
+        <option>MID CHAOS (34-66)</option>
+        <option>EXTREME CHAOS (67-100)</option>
+      </select>
+      <select class="filter-select">
+        <option>ANY BACKSTORY</option>
+        <option>SIMPLE BACKSTORY</option>
+        <option>COMPLEX BACKSTORY</option>
+        <option>CLASSIFIED BACKSTORY</option>
+      </select>
+      <button class="btn btn-primary" style="padding:8px 18px;font-size:0.9rem;">GO FAST SEARCH</button>
+    </div>
+
+    <!-- HEDGEHOG GRID -->
+    <div class="grid-4">
+
+      <!-- 1: Sanic Jr. -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar">
+          💙🦔
+          <div class="status-badge status-available">AVAILABUL</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Sanic Jr.</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-blue">VERY FAST</span>
+            <span class="hedgehog-tag tag-gold">RING LOVAR</span>
+          </div>
+          <div class="hedgehog-bio">
+            blue hedgehag. age 2. speed is his whole personality. if u stop moving 4 mor than 3 seconds he will b concern. he likes rings and running and running 2 collect rings. simple king.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">SPEED</span>
+              <div class="stat-bar"><div class="stat-fill" data-width="98%" style="width:98%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">98</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="70%" style="width:70%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">70</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">FRINDLINES</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="88%" style="width:88%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">88</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: 2 • backstory: simple but speedy</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 2: Knackles II -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(255,34,0,0.22),rgba(0,87,255,0.1));">
+          ❤️🦔
+          <div class="status-badge status-available">AVAILABUL</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Knackles II</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-red">PUNCHER</span>
+            <span class="hedgehog-tag tag-blue">ISLAND NAYTIV</span>
+          </div>
+          <div class="hedgehog-bio">
+            red hedgehag. age 4. he was raised on da mountain peak of hallowean island by knackles (da real one). he has inherited da punching lifestyle. looking 4 hoam wit sturdy furniture.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">PUNCHING</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="99%" style="width:99%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">99</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill purple" data-width="85%" style="width:85%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">85</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">FRINDLINES</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="60%" style="width:60%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">60</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: 4 • backstory: mountain warrior lore</p>
+          <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 3: Shaddow -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(10,10,20,0.9),rgba(153,51,255,0.2));">
+          🖤🦔
+          <div class="status-badge status-pending">PENDING</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Shaddow</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-purple">VERY EDGY</span>
+            <span class="hedgehog-tag tag-red">DARK SIDE</span>
+          </div>
+          <div class="hedgehog-bio">
+            dark hedgehag. age 3 (but existenshully ancient). from da darkest cave on hallowean island. his eyes contain da secrets of da univers. skill: staring. counterstaring. deep sighing.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">EDGINESS</span>
+              <div class="stat-bar"><div class="stat-fill purple" data-width="100%" style="width:100%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">MAX</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="95%" style="width:95%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">95</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">MYSTERRY</span>
+              <div class="stat-bar"><div class="stat-fill purple" data-width="97%" style="width:97%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">97</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: unknowable • backstory: classified (3 volumes)</p>
+          <a href="contact.html" class="btn" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;background:#440088;color:white;box-shadow:0 0 18px rgba(153,51,255,0.4),4px 4px 0 var(--knackles-red);">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 4: Amey Rose -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(255,100,150,0.2),rgba(0,87,255,0.08));">
+          🩷🦔
+          <div class="status-badge status-available">AVAILABUL</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Amey Rose</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-gold">V. ENTHUSIASTIK</span>
+            <span class="hedgehog-tag tag-blue">FLOWER LOVAR</span>
+          </div>
+          <div class="hedgehog-bio">
+            pink hedgehag. age 1.5. she is da most enthusiastik hedgehag on hallowean island. she collects flowers and also hammers (decorativly). she believes in u and ur dreams and also fast running.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">ENTHUZIASM</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="100%" style="width:100%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">MAX</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="45%" style="width:45%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">45</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">FRINDLINES</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="99%" style="width:99%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">99</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: 1.5 • backstory: heartwarming but chaotic</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;background:#CC3377;">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 5: Silvar -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(200,220,255,0.15),rgba(153,51,255,0.12));">
+          🤍🦔
+          <div class="status-badge status-available">AVAILABUL</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Silvar</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-purple">FROM DA FUTUR</span>
+            <span class="hedgehog-tag tag-blue">FYSIKAL POWERS</span>
+          </div>
+          <div class="hedgehog-bio">
+            silver hedgehag. age: it's complicated. he travled bak in time 2 hallowean island 2 find sum1 2 adopt him. he has mild fysikal powers (can move small objects). he will tell u ur futur (he refuses 2 tell u if it's bad).
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">FYSIKAL PWR</span>
+              <div class="stat-bar"><div class="stat-fill purple" data-width="82%" style="width:82%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">82</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="60%" style="width:60%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">60</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">TIME KNOWLIJ</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="90%" style="width:90%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">90</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: complicated • backstory: time paradox</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 6: Blaze McFyre -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(255,100,0,0.25),rgba(255,34,0,0.15));">
+          🧡🦔
+          <div class="status-badge status-available">AVAILABUL</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Blaze McFyre</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-red">LITERALLY ON FIRE?</span>
+            <span class="hedgehog-tag tag-gold">LAVA ZONE NAYTIV</span>
+          </div>
+          <div class="hedgehog-bio">
+            orange-ish hedgehag. age 5. from da volcanu sekshun of hallowean island. she is technically on fire but it doesn't hurt her? scientists r confusd. she is warm 2 cuddul. do not put her near curtains.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">FIRE LEVEL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="88%" style="width:88%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">88</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill purple" data-width="75%" style="width:75%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">75</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">WARMTH</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="95%" style="width:95%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">95</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: 5 • backstory: lava zone guardian</p>
+          <a href="contact.html" class="btn btn-secondary" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 7: Big Chungo -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(0,87,255,0.1),rgba(0,150,100,0.1));">
+          🔵🦔
+          <div class="status-badge status-available">AVAILABUL</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Big Chungo</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-blue">VERRY LARGE</span>
+            <span class="hedgehog-tag tag-gold">FISHING PASSHUN</span>
+          </div>
+          <div class="hedgehog-bio">
+            blue hedgehag. age 7. he is da larges hedgehag on hallowean island (still very small by normul animal standurds). he likes fishing in da chaos lake. he is very calum. he has 1 fish frend named froggy 2.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">CALMNESS</span>
+              <div class="stat-bar"><div class="stat-fill" data-width="96%" style="width:96%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">96</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="12%" style="width:12%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">12</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">FISHING SKILL</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="100%" style="width:100%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">MAX</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: 7 • backstory: fishy but peaceful</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;">ADOPT DIS 1</a>
+        </div>
+      </div>
+
+      <!-- 8: Omachao -->
+      <div class="hedgehog-card">
+        <div class="hedgehog-avatar" style="background:linear-gradient(135deg,rgba(0,200,255,0.15),rgba(153,51,255,0.1));">
+          💜🦔
+          <div class="status-badge status-pending">PENDING</div>
+        </div>
+        <div class="hedgehog-info">
+          <div class="hedgehog-name">Omachao</div>
+          <div style="margin-bottom:8px;">
+            <span class="hedgehog-tag tag-blue">VERRY MYSTERIOUS</span>
+            <span class="hedgehog-tag tag-purple">GOD TIER??</span>
+          </div>
+          <div class="hedgehog-bio">
+            ??? hedgehag. age: ???. he was found on a speshul alter in da center of hallowean island. he may b 1 of god's hedgehags. he stares. he knows things. he will not tell u da things. he vibrates at a slightly wrong frequency.
+          </div>
+          <div class="hedgehog-stats">
+            <div class="stat">
+              <span class="stat-label">MYSTERIOSNESS</span>
+              <div class="stat-bar"><div class="stat-fill purple" data-width="100%" style="width:100%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">∞</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">CHAOS LVL</span>
+              <div class="stat-bar"><div class="stat-fill red" data-width="100%" style="width:100%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">∞</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">UNKNOWNNESS</span>
+              <div class="stat-bar"><div class="stat-fill gold" data-width="100%" style="width:100%"></div></div>
+              <span style="font-size:0.7rem;color:var(--text-muted);">∞</span>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin:8px 0;">🦔 age: ??? • backstory: we do not know</p>
+          <a href="contact.html" class="btn" style="width:100%;text-align:center;font-size:0.95rem;padding:10px;display:block;background:#220044;border:2px solid var(--chaos-purple);color:#CC88FF;box-shadow:0 0 20px rgba(153,51,255,0.4);">ADOPT IF U DARE</a>
+        </div>
+      </div>
+
+    </div><!-- end grid -->
+
+    <hr class="section-divider">
+
+    <!-- ADOPTION PROCESS -->
+    <section>
+      <h2 class="section-title">HOW 2 ADOPT A HEDGEHAG</h2>
+      <p class="section-subtitle">da offishul 5-step process approved by sanic and knackles</p>
+
+      <div style="max-width:700px;">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>PICK UR HEDGEHAG</h3>
+            <p>look at all da hedgehags above. feel da chaos energy. listen 2 ur hart. da right hedgehag will make ur soul vibrate at da same frequency as hallowean island. u will just know.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>KONTAKT US</h3>
+            <p>fill out da kontakt form wit ur name, ur addres, and a short essay (min 500 words) explaining y u r worthy of a hallowean island hedgehag. sanic will review ur applicashun personally (he reads very fast).</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>DA SPEED TEST</h3>
+            <p>u will b invitid 2 complete da offishul speed test at our hallowean island faciluty (or remutly via zoom). u do not need 2 b fast urself. u just need 2 understand speed on a spiritul level.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>KNACKLES APPROOVAL</h3>
+            <p>knackles will review ur applicashun by looking at a foto of ur hands. if ur hands look like hands dat would care 4 a hedgehag, u r approovd. dis process takes 2-3 bizness days.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h3>WELCUM UR HEDGEHAG</h3>
+            <p>ur hedgehag will b deliverd 2 u from hallowean island via sanic express delivery. dey will arrive very fast. pls prepare a small welcum area wit sum symbolic rings and a motivashunul poster abt running.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <div class="warning-box">
+      <p style="color:var(--text-primary);font-size:0.95rem;line-height:1.65;">
+        by adoptng a hallowean island hedgehag u agree dat: da chaos energy emittid is not da falt of sanic & knackles hedgehag adaptian, da hedgehag may occasionally stare in2 da void, all speed-related furniture damage is ur responsubilty, and dat hallowean island is real and u will not challenge dis fact in public or private.
+      </p>
+    </div>
+
+    <div style="text-align:center;margin-top:28px;">
+      <a href="contact.html" class="btn btn-primary" style="font-size:1.3rem;padding:16px 40px;">BEGIN UR ADAPTASHUN JORNEY 🦔</a>
+    </div>
+
+  </main>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer>
+    <div class="chaos-ticker" style="border-top:none;">
+      <div class="chaos-ticker-inner" style="animation-duration:28s;animation-direction:reverse;">
+        🌙&nbsp;HALLOWEAN ISLAND&nbsp;&nbsp;•&nbsp;&nbsp;ZONE 7, ACT 3&nbsp;&nbsp;•&nbsp;&nbsp;ALWAYS OCTOBER&nbsp;&nbsp;•&nbsp;&nbsp;PURPLE SKY&nbsp;&nbsp;•&nbsp;&nbsp;BLUE GROUND&nbsp;&nbsp;•&nbsp;&nbsp;HOME OF DA HEDGEHAGS&nbsp;&nbsp;•&nbsp;&nbsp;CHAOS EMERALDS HIDDEN SUMWEAR&nbsp;&nbsp;•&nbsp;&nbsp;
+        🌙&nbsp;HALLOWEAN ISLAND&nbsp;&nbsp;•&nbsp;&nbsp;ZONE 7, ACT 3&nbsp;&nbsp;•&nbsp;&nbsp;ALWAYS OCTOBER&nbsp;&nbsp;•&nbsp;&nbsp;PURPLE SKY&nbsp;&nbsp;•&nbsp;&nbsp;BLUE GROUND&nbsp;&nbsp;•&nbsp;&nbsp;HOME OF DA HEDGEHAGS&nbsp;&nbsp;•&nbsp;&nbsp;CHAOS EMERALDS HIDDEN SUMWEAR&nbsp;&nbsp;•&nbsp;&nbsp;
+      </div>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h3>SANIC &amp; KNACKLES HEDGEHAG ADAPTIAN</h3>
+        <p>da only offishul hedgehag adaptashun senter on hallowean island</p>
+        <p>founded by sanic da hedgehag and his frend knackles</p>
+        <p>we r verry legit</p>
+      </div>
+      <div class="footer-section">
+        <h3>LOKS</h3>
+        <a href="index.html">HOAM</a>
+        <a href="about.html">ABOWT US</a>
+        <a href="adopt.html">DA HEDGEHAGS</a>
+        <a href="donate.html">DONASHUN</a>
+        <a href="contact.html">KONTAKT</a>
+      </div>
+      <div class="footer-section">
+        <h3>KONTAKT</h3>
+        <p>1 Gotta-Go-Fast Lane</p>
+        <p>Hallowean Island</p>
+        <p>Zone 7, Act 3</p>
+        <p>sanic@halloweanisland.zone</p>
+        <p>1-800-GO-HFAST</p>
+      </div>
+      <div class="footer-section">
+        <h3>IMPORTANT WARNINS</h3>
+        <p>🦔 hedgehags r very fast</p>
+        <p>🦔 do not chase ur hedgehag</p>
+        <p>🦔 if u lose da rings its ovr</p>
+        <p>🦔 hallowean island is 100% real</p>
+        <p>🦔 we r not responsibul 4 chaos</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 1994 Sanic &amp; Knackles Hedgehag Adaptian. All hedgehags going fast. Hallowean Island is protected by da 7 Chaos Emeralds.</p>
+      <p style="margin-top:7px;color:var(--knackles-red);">⚠️ dis website may cause spontaneous hedgehag adoptashun. u hav been warnd ⚠️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

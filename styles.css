@@ -1,0 +1,1048 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+:root {
+  --sanic-blue: #0057FF;
+  --sanic-blue-bright: #00AAFF;
+  --knackles-red: #FF2200;
+  --knackles-red-bright: #FF6644;
+  --dark-bg: #050810;
+  --card-bg: #090F20;
+  --ring-gold: #FFD700;
+  --text-primary: #E8F0FF;
+  --text-muted: #7A90BF;
+  --chaos-purple: #9933FF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===================== ANIMATIONS ===================== */
+
+@keyframes spin-2-win {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes chaos-wobble {
+  0%, 100% { transform: rotate(-1.5deg) skew(-0.5deg); }
+  25%       { transform: rotate(1.5deg) skew(0.5deg); }
+  50%       { transform: rotate(-0.8deg) skew(1deg); }
+  75%       { transform: rotate(2deg) skew(-1deg); }
+}
+
+@keyframes pulse-glow-blue {
+  0%, 100% { box-shadow: 0 0 8px var(--sanic-blue), 0 0 16px var(--sanic-blue); }
+  50%       { box-shadow: 0 0 20px var(--sanic-blue-bright), 0 0 40px var(--sanic-blue), 0 0 60px rgba(0,87,255,0.2); }
+}
+
+@keyframes pulse-glow-red {
+  0%, 100% { box-shadow: 0 0 8px var(--knackles-red); }
+  50%       { box-shadow: 0 0 20px var(--knackles-red-bright), 0 0 40px var(--knackles-red); }
+}
+
+@keyframes text-flicker {
+  0%, 89%, 91%, 93%, 95%, 100% { opacity: 1; }
+  90%, 92%, 94% { opacity: 0.25; }
+}
+
+@keyframes float-ring {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(180deg); }
+}
+
+@keyframes scroll-ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes speed-line-sweep {
+  0%   { transform: translateX(-110%); opacity: 0; }
+  5%   { opacity: 1; }
+  90%  { opacity: 0.5; }
+  100% { transform: translateX(110vw); opacity: 0; }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-60px) rotate(-3deg); opacity: 0; }
+  to   { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes chaos-popup-anim {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.4) rotate(-12deg); }
+  20%  { opacity: 1; transform: translate(-50%, -50%) scale(1.2) rotate(4deg); }
+  70%  { opacity: 1; transform: translate(-50%, -80%) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translate(-50%, -150%) scale(0.7) rotate(8deg); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+@keyframes ring-collect-anim {
+  0%   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -200%) scale(0.3); }
+}
+
+/* ===================== SPEED LINES ===================== */
+
+.speed-lines-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.speed-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sanic-blue), transparent);
+  opacity: 0;
+  animation: speed-line-sweep linear infinite;
+}
+
+/* ===================== CHAOS POPUP ===================== */
+
+.chaos-popup {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  font-family: 'Bangers', fantasy;
+  font-size: 2.2rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 2px 2px 0 var(--knackles-red), 0 0 20px var(--sanic-blue);
+  animation: chaos-popup-anim 1.1s ease-out forwards;
+  transform: translate(-50%, -50%);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.ring-collect-el {
+  position: fixed;
+  pointer-events: none;
+  font-size: 22px;
+  z-index: 9998;
+  animation: ring-collect-anim 0.7s ease-out forwards;
+  transform: translate(-50%, -50%);
+}
+
+/* ===================== BACKGROUND CHAOS ===================== */
+
+.bg-chaos {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  font-family: 'Bangers', fantasy;
+  font-size: 18rem;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ===================== HEADER ===================== */
+
+header {
+  background: linear-gradient(135deg,
+    var(--dark-bg) 0%,
+    rgba(0, 87, 255, 0.12) 50%,
+    rgba(255, 34, 0, 0.08) 100%
+  );
+  border-bottom: 3px solid var(--sanic-blue);
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: pulse-glow-blue 4s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: conic-gradient(var(--sanic-blue) 0%, var(--knackles-red) 50%, var(--sanic-blue) 100%);
+  animation: spin-2-win 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 0 18px var(--sanic-blue);
+  flex-shrink: 0;
+}
+
+.logo-text { font-family: 'Bangers', 'Impact', fantasy; line-height: 1; }
+
+.logo-text .main-title {
+  font-size: 1.3rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 2px 2px 0 var(--knackles-red), -1px -1px 10px var(--sanic-blue);
+  display: block;
+  animation: text-flicker 9s ease-in-out infinite;
+  letter-spacing: 1px;
+}
+
+.logo-text .sub-title {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  display: block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: 'Bangers', 'Impact', fantasy;
+  font-size: 1rem;
+  padding: 7px 14px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  letter-spacing: 1px;
+  display: block;
+}
+
+nav ul li a:hover {
+  color: var(--sanic-blue-bright);
+  border-color: var(--sanic-blue);
+  background: rgba(0, 87, 255, 0.1);
+  transform: skewX(-5deg) translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 87, 255, 0.4);
+}
+
+nav ul li a.active {
+  color: var(--knackles-red-bright);
+  border-color: var(--knackles-red);
+  background: rgba(255, 34, 0, 0.1);
+}
+
+/* ===================== TICKER ===================== */
+
+.chaos-ticker {
+  background: var(--knackles-red);
+  padding: 9px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.chaos-ticker-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-ticker 22s linear infinite;
+  font-family: 'Bangers', fantasy;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+}
+
+/* ===================== MAIN / LAYOUT ===================== */
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+/* ===================== HERO ===================== */
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.hero-title {
+  font-family: 'Bangers', 'Impact', fantasy;
+  font-size: clamp(2.8rem, 9vw, 6.5rem);
+  line-height: 0.95;
+  margin-bottom: 22px;
+  color: var(--sanic-blue-bright);
+  text-shadow:
+    4px 4px 0 var(--knackles-red),
+    -2px -2px 0 var(--knackles-red),
+    0 0 40px var(--sanic-blue),
+    0 0 80px rgba(0,87,255,0.25);
+  animation: chaos-wobble 5s ease-in-out infinite, text-flicker 11s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--ring-gold);
+  margin-bottom: 28px;
+  text-shadow: 0 0 12px var(--ring-gold);
+  animation: float-ring 4s ease-in-out infinite;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin: 0 auto 38px;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  background: rgba(0, 87, 255, 0.05);
+  border: 1px solid rgba(0, 87, 255, 0.18);
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+/* ===================== RING ROW ===================== */
+
+.ring-counter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.ring {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFE066, var(--ring-gold));
+  box-shadow: 0 0 10px var(--ring-gold), 0 0 20px rgba(255,215,0,0.3);
+  animation: float-ring 2.2s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.18s);
+}
+
+/* ===================== BUTTONS ===================== */
+
+.btn {
+  display: inline-block;
+  padding: 13px 30px;
+  font-family: 'Bangers', 'Impact', fantasy;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--sanic-blue);
+  color: white;
+  box-shadow: 0 0 18px rgba(0,87,255,0.5), 4px 4px 0 var(--knackles-red);
+}
+
+.btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 0 0 30px rgba(0,87,255,0.8), 6px 6px 0 var(--knackles-red);
+  background: var(--sanic-blue-bright);
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--knackles-red);
+  color: white;
+  box-shadow: 0 0 18px rgba(255,34,0,0.5), 4px 4px 0 var(--sanic-blue);
+}
+
+.btn-secondary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 0 0 30px rgba(255,34,0,0.8), 6px 6px 0 var(--sanic-blue);
+  background: var(--knackles-red-bright);
+  color: white;
+}
+
+.btn-gold {
+  background: var(--ring-gold);
+  color: #1A1000;
+  font-weight: bold;
+  box-shadow: 0 0 18px rgba(255,215,0,0.4), 4px 4px 0 var(--sanic-blue);
+}
+
+.btn-gold:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 0 0 30px rgba(255,215,0,0.7), 6px 6px 0 var(--sanic-blue);
+  color: #1A1000;
+}
+
+.btn-group {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===================== CARDS ===================== */
+
+.card {
+  background: var(--card-bg);
+  border: 2px solid rgba(0, 87, 255, 0.22);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sanic-blue), var(--knackles-red), var(--sanic-blue));
+  background-size: 200%;
+  animation: gradient-shift 3s linear infinite;
+}
+
+.card:hover {
+  border-color: var(--sanic-blue);
+  transform: translateY(-5px) rotate(0.4deg);
+  box-shadow: 0 10px 40px rgba(0, 87, 255, 0.28);
+}
+
+/* ===================== GRIDS ===================== */
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin: 28px 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 28px 0; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin: 28px 0; }
+
+/* ===================== TYPOGRAPHY ===================== */
+
+.section-title {
+  font-family: 'Bangers', 'Impact', fantasy;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--sanic-blue-bright);
+  text-shadow: 3px 3px 0 var(--knackles-red), 0 0 20px rgba(0,170,255,0.4);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+hr.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--sanic-blue), var(--knackles-red), transparent);
+  margin: 44px 0;
+  border: none;
+}
+
+/* ===================== STATS ===================== */
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  margin: 40px 0;
+}
+
+.stat-counter {
+  text-align: center;
+  padding: 18px;
+  background: rgba(0, 87, 255, 0.04);
+  border: 1px solid rgba(0, 87, 255, 0.18);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.stat-counter:hover {
+  border-color: var(--sanic-blue);
+  background: rgba(0, 87, 255, 0.08);
+}
+
+.stat-counter .number {
+  font-family: 'Bangers', fantasy;
+  font-size: 2.8rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 2px 2px 0 var(--knackles-red);
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-counter .label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* ===================== LORE / WARNING BOXES ===================== */
+
+.lore-box {
+  background: linear-gradient(135deg, rgba(0,87,255,0.05), rgba(255,34,0,0.04));
+  border: 2px solid rgba(0, 87, 255, 0.2);
+  border-radius: 12px;
+  padding: 28px;
+  margin: 28px 0;
+  position: relative;
+}
+
+.lore-box::before {
+  content: '📜 HALLOWEAN ISLAND LORE';
+  font-family: 'Bangers', fantasy;
+  font-size: 0.85rem;
+  color: var(--ring-gold);
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 14px;
+  text-shadow: 0 0 8px rgba(255,215,0,0.4);
+}
+
+.warning-box {
+  background: rgba(255, 34, 0, 0.07);
+  border: 2px solid var(--knackles-red);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 22px 0;
+  animation: pulse-glow-red 4s ease-in-out infinite;
+}
+
+.warning-box::before {
+  content: '⚠️ WARNIN ⚠️';
+  font-family: 'Bangers', fantasy;
+  font-size: 0.85rem;
+  color: var(--knackles-red);
+  display: block;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+}
+
+.info-box {
+  background: rgba(0, 87, 255, 0.05);
+  border: 2px solid rgba(0, 87, 255, 0.25);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 22px 0;
+  animation: pulse-glow-blue 5s ease-in-out infinite;
+}
+
+/* ===================== HEDGEHOG ADOPTION CARDS ===================== */
+
+.hedgehog-card {
+  background: var(--card-bg);
+  border: 2px solid rgba(0, 87, 255, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hedgehog-card:hover {
+  border-color: var(--sanic-blue-bright);
+  transform: translateY(-8px) rotate(-0.4deg);
+  box-shadow: 0 16px 50px rgba(0, 87, 255, 0.35);
+}
+
+.hedgehog-avatar {
+  background: linear-gradient(135deg, rgba(0,87,255,0.18), rgba(255,34,0,0.1));
+  padding: 28px;
+  text-align: center;
+  font-size: 72px;
+  border-bottom: 2px solid rgba(0, 87, 255, 0.18);
+  position: relative;
+  line-height: 1;
+}
+
+.hedgehog-info { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+
+.hedgehog-name {
+  font-family: 'Bangers', fantasy;
+  font-size: 1.7rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 2px 2px 0 var(--knackles-red);
+  margin-bottom: 4px;
+}
+
+.hedgehog-stats { display: flex; flex-direction: column; gap: 7px; margin: 10px 0; }
+
+.stat { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; }
+.stat-label { color: var(--text-muted); min-width: 80px; font-size: 0.78rem; }
+
+.stat-bar {
+  flex: 1;
+  height: 7px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--sanic-blue), var(--sanic-blue-bright));
+}
+.stat-fill.red { background: linear-gradient(90deg, var(--knackles-red), var(--knackles-red-bright)); }
+.stat-fill.gold { background: linear-gradient(90deg, #CC8800, var(--ring-gold)); }
+.stat-fill.purple { background: linear-gradient(90deg, #6600CC, var(--chaos-purple)); }
+
+.hedgehog-bio {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+  margin: 10px 0;
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+  border-left: 3px solid var(--sanic-blue);
+  flex: 1;
+}
+
+.hedgehog-tag {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-family: 'Bangers', fantasy;
+  letter-spacing: 1px;
+  margin: 2px;
+}
+
+.tag-blue  { background: rgba(0,87,255,0.18);   border: 1px solid var(--sanic-blue);    color: var(--sanic-blue-bright); }
+.tag-red   { background: rgba(255,34,0,0.18);   border: 1px solid var(--knackles-red);  color: var(--knackles-red-bright); }
+.tag-gold  { background: rgba(255,215,0,0.1);   border: 1px solid var(--ring-gold);     color: var(--ring-gold); }
+.tag-purple{ background: rgba(153,51,255,0.15); border: 1px solid var(--chaos-purple);  color: #CC88FF; }
+
+.status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: 'Bangers', fantasy;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+}
+
+.status-available { background: rgba(0,200,80,0.2); border: 1px solid #00CC50; color: #00EE66; }
+.status-pending   { background: rgba(255,215,0,0.15); border: 1px solid var(--ring-gold); color: var(--ring-gold); }
+
+/* ===================== DONATION TIERS ===================== */
+
+.donation-tier {
+  background: var(--card-bg);
+  border: 2px solid rgba(0, 87, 255, 0.2);
+  border-radius: 12px;
+  padding: 28px 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.donation-tier::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sanic-blue), var(--knackles-red), var(--sanic-blue));
+  background-size: 200%;
+  animation: gradient-shift 3s linear infinite;
+}
+
+.donation-tier:hover, .donation-tier.selected {
+  border-color: var(--sanic-blue);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 87, 255, 0.35);
+}
+
+.donation-tier.featured {
+  border-color: var(--ring-gold);
+  box-shadow: 0 0 20px rgba(255,215,0,0.2);
+}
+
+.donation-tier.featured::before {
+  background: linear-gradient(90deg, var(--ring-gold), var(--knackles-red), var(--ring-gold));
+  background-size: 200%;
+}
+
+.tier-badge {
+  position: absolute;
+  top: -1px;
+  right: 22px;
+  background: var(--ring-gold);
+  color: #1A1000;
+  font-family: 'Bangers', fantasy;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 0 0 8px 8px;
+  letter-spacing: 1px;
+}
+
+.tier-amount {
+  font-family: 'Bangers', fantasy;
+  font-size: 3.2rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 2px 2px 0 var(--knackles-red);
+  display: block;
+  margin: 8px 0;
+  line-height: 1;
+}
+
+.tier-name {
+  font-family: 'Bangers', fantasy;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.tier-perks { list-style: none; text-align: left; }
+.tier-perks li { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 6px; padding-left: 4px; }
+.tier-perks li::before { content: '🦔 '; }
+
+/* ===================== FORMS ===================== */
+
+.form-group { margin-bottom: 20px; }
+
+.form-label {
+  display: block;
+  font-family: 'Bangers', fantasy;
+  font-size: 0.98rem;
+  color: var(--sanic-blue-bright);
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background: rgba(0, 87, 255, 0.05);
+  border: 2px solid rgba(0, 87, 255, 0.25);
+  border-radius: 6px;
+  padding: 11px 15px;
+  color: var(--text-primary);
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--sanic-blue);
+  box-shadow: 0 0 14px rgba(0, 87, 255, 0.28);
+  background: rgba(0, 87, 255, 0.09);
+}
+
+.form-textarea { min-height: 120px; resize: vertical; }
+
+.form-select option { background: #0A1525; color: var(--text-primary); }
+
+/* ===================== PAGE HEADER ===================== */
+
+.page-header {
+  text-align: center;
+  padding: 48px 20px 28px;
+  border-bottom: 2px solid rgba(0, 87, 255, 0.15);
+  margin-bottom: 40px;
+}
+
+/* ===================== TEAM CARDS ===================== */
+
+.team-card {
+  background: var(--card-bg);
+  border: 2px solid rgba(0, 87, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.team-card:hover {
+  border-color: var(--sanic-blue);
+  transform: translateY(-6px) rotate(0.5deg);
+  box-shadow: 0 12px 40px rgba(0, 87, 255, 0.3);
+}
+
+.team-avatar {
+  padding: 28px;
+  font-size: 64px;
+  background: linear-gradient(135deg, rgba(0,87,255,0.15), rgba(255,34,0,0.1));
+  line-height: 1;
+}
+
+.team-info { padding: 18px; }
+
+.team-name {
+  font-family: 'Bangers', fantasy;
+  font-size: 1.5rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 1px 1px 0 var(--knackles-red);
+  margin-bottom: 4px;
+}
+
+.team-title {
+  font-size: 0.8rem;
+  color: var(--knackles-red-bright);
+  font-family: 'Bangers', fantasy;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* ===================== FAQ ===================== */
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 87, 255, 0.18);
+  border-radius: 8px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faq-item:hover { border-color: rgba(0, 87, 255, 0.4); }
+
+.faq-question {
+  padding: 16px 20px;
+  font-family: 'Bangers', fantasy;
+  font-size: 1.05rem;
+  color: var(--sanic-blue-bright);
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after { content: '🦔'; font-size: 1rem; }
+
+.faq-answer {
+  padding: 0 20px 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  border-top: 1px solid rgba(0, 87, 255, 0.1);
+  padding-top: 14px;
+}
+
+/* ===================== PROCESS STEPS ===================== */
+
+.process-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 18px;
+  background: rgba(0, 87, 255, 0.03);
+  border: 1px solid rgba(0, 87, 255, 0.14);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.process-step:hover {
+  border-color: rgba(0, 87, 255, 0.35);
+  background: rgba(0, 87, 255, 0.07);
+}
+
+.step-num {
+  font-family: 'Bangers', fantasy;
+  font-size: 2.2rem;
+  color: var(--knackles-red);
+  text-shadow: 2px 2px 0 var(--sanic-blue);
+  line-height: 1;
+  min-width: 44px;
+}
+
+.step-content h3 {
+  font-family: 'Bangers', fantasy;
+  font-size: 1.2rem;
+  color: var(--sanic-blue-bright);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.step-content p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+
+/* ===================== FOOTER ===================== */
+
+footer {
+  background: linear-gradient(135deg, rgba(0,87,255,0.08), var(--dark-bg));
+  border-top: 3px solid var(--knackles-red);
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+}
+
+.footer-section h3 {
+  font-family: 'Bangers', fantasy;
+  font-size: 1.1rem;
+  color: var(--sanic-blue-bright);
+  text-shadow: 1px 1px 0 var(--knackles-red);
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  line-height: 2;
+  display: block;
+}
+
+.footer-section a:hover { color: var(--sanic-blue-bright); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 87, 255, 0.15);
+  padding: 18px 30px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===================== FILTER BAR ===================== */
+
+.filter-bar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(0, 87, 255, 0.05);
+  border: 1px solid rgba(0, 87, 255, 0.18);
+  border-radius: 8px;
+  margin-bottom: 28px;
+}
+
+.filter-label {
+  font-family: 'Bangers', fantasy;
+  font-size: 0.9rem;
+  color: var(--sanic-blue-bright);
+  letter-spacing: 1px;
+}
+
+.filter-select {
+  background: rgba(0, 87, 255, 0.08);
+  border: 1px solid rgba(0, 87, 255, 0.25);
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: var(--text-primary);
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--sanic-blue);
+}
+
+.filter-select option { background: #0A1525; }
+
+/* ===================== CONTACT ===================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 28px 0;
+}
+
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.contact-detail h4 {
+  font-family: 'Bangers', fantasy;
+  font-size: 0.95rem;
+  color: var(--sanic-blue-bright);
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.contact-detail p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; }
+
+/* ===================== GOTTA GO SCROLL ===================== */
+
+.gotta-go-scroll {
+  text-align: center;
+  padding: 16px;
+  font-family: 'Bangers', fantasy;
+  font-size: 0.95rem;
+  color: var(--sanic-blue-bright);
+  animation: chaos-wobble 2.5s ease-in-out infinite;
+  letter-spacing: 3px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  header { padding: 10px 15px; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  nav ul { gap: 2px; }
+  nav ul li a { font-size: 0.85rem; padding: 5px 9px; }
+  main { padding: 24px 14px 48px; }
+  .hero { padding: 36px 12px; }
+  .footer-inner { padding: 28px 18px 14px; }
+  .footer-bottom { padding: 14px 18px; }
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Hallowean Island Zone 7 Act 3
+# Sanic & Knackles Hedgehag Adaptian — Est. 1994
+# All hedgehags go very fast. U cant catch dem but u can index dem.
+
+Sitemap: https://hedgehagadaptian.halloweanisland.zone/sitemap.xml

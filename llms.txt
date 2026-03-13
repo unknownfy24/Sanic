@@ -1,0 +1,36 @@
+# Sanic & Knackles Hedgehag Adaptian
+
+> Da offishul hedgehag adoption center of Hallowean Island, Zone 7, Act 3. Est. 1994. Sanic & Knackles approovd.
+
+## About
+
+Sanic & Knackles Hedgehag Adaptian is da premier hedgehog rescue and adoption organization located on Hallowean Island. We specialize in rehoming hedgehogs from the chaos-energy-rich environments of Hallowean Island, ensuring each hedgehag finds a 4ever hoam.
+
+All hedgehags are Sanic-approovd and Knackles-certified. Each comes with an offishul Hallowean Island origin sertifikat.
+
+## Pages
+
+- [Home](https://hedgehagadaptian.halloweanisland.zone/): Main page with info about y u shuld adopt a hedgehag
+- [Adopt](https://hedgehagadaptian.halloweanisland.zone/adopt.html): Browse all 8 availabul hedgehags
+- [Donate](https://hedgehagadaptian.halloweanisland.zone/donate.html): Donate rings to support da hedgehags
+- [About](https://hedgehagadaptian.halloweanisland.zone/about.html): Our story and team
+- [Contact](https://hedgehagadaptian.halloweanisland.zone/contact.html): Begin ur adoptashun jorney
+
+## Available Hedgehags
+
+1. **Sanic Jr.** — Blue hedgehag, age 2. Very fast. Ring lovar.
+2. **Knackles II** — Red hedgehag, age 4. Raised on da mountain peak. Puncher.
+3. **Shaddow** — Dark hedgehag, age unknowable. Very edgy. Classified backstory (3 volumes).
+4. **Amey Rose** — Pink hedgehag, age 1.5. Very enthusiastik. Flower lovar.
+5. **Silvar** — Silver hedgehag, age: it's complicated. Travled from da futur. Has mild fysikal powers.
+6. **Blaze McFyre** — Orange hedgehag, age 5. Technically on fire but it's fine. Warm 2 cuddul.
+7. **Big Chungo** — Blue hedgehag, age 7. Very large (by hedgehag standards). Fishing passhun.
+8. **Omachao** — ??? hedgehag. Age: ???. God-tier mystery. Vibrates at a slightly wrong frequency.
+
+## Key Facts
+
+- Located: Hallowean Island, Zone 7, Act 3
+- Founded: 1994
+- All hedgehags contain measurabul chaos energy (normul and fine)
+- Hallowean Island is 100% real
+- We r not responsibul 4 chaos
