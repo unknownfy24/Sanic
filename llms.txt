@@ -10,11 +10,11 @@ All hedgehags are Sanic-approovd and Knackles-certified. Each comes with an offi
 
 ## Pages
 
-- [Home](https://hedgehagadaptian.halloweanisland.zone/): Main page with info about y u shuld adopt a hedgehag
-- [Adopt](https://hedgehagadaptian.halloweanisland.zone/adopt.html): Browse all 8 availabul hedgehags
-- [Donate](https://hedgehagadaptian.halloweanisland.zone/donate.html): Donate rings to support da hedgehags
-- [About](https://hedgehagadaptian.halloweanisland.zone/about.html): Our story and team
-- [Contact](https://hedgehagadaptian.halloweanisland.zone/contact.html): Begin ur adoptashun jorney
+- [Home](https://unknownfy24.github.io/Sanic/): Main page with info about y u shuld adopt a hedgehag
+- [Adopt](https://unknownfy24.github.io/Sanic/adopt.html): Browse all 8 availabul hedgehags
+- [Donate](https://unknownfy24.github.io/Sanic/donate.html): Donate rings to support da hedgehags
+- [About](https://unknownfy24.github.io/Sanic/about.html): Our story and team
+- [Contact](https://unknownfy24.github.io/Sanic/contact.html): Begin ur adoptashun jorney
 
 ## Available Hedgehags
 

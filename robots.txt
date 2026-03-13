@@ -5,4 +5,4 @@ Allow: /
 # Sanic & Knackles Hedgehag Adaptian — Est. 1994
 # All hedgehags go very fast. U cant catch dem but u can index dem.
 
-Sitemap: https://hedgehagadaptian.halloweanisland.zone/sitemap.xml
+Sitemap: https://unknownfy24.github.io/Sanic/sitemap.xml
